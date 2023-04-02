@@ -10,23 +10,17 @@ const galleryRef = document.querySelector(".gallery");
         </a>
      </li>`).join("");
      
-
-
 galleryRef.insertAdjacentHTML("beforeend", markupLi);
 
+const lightbox = new SimpleLightbox(".gallery a", {
+captionsData: "alt",	
+
+captionPosition: "down",
+
+captionDelay: 250,
+
+nav: "true",
+//    // true	bool	show arrow-navigation or not  
+});
 console.log(galleryItems);
-console.log(galleryRef);
-
-
-    const lightbox = new SimpleLightbox(".gallery a", {
-      captionsData: "alt",	
-      
-      captionPosition: "down",
-      
-      captionDelay: 250,
-      
-      nav: "true",
-      //    // true	bool	show arrow-navigation or not  
-      });
-
       
